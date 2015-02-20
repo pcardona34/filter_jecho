@@ -1,0 +1,83 @@
+Filtre Jecho pour Moodle - (C)2015 - Patrick Cardona
+
+A - Introduction
+================
+Ce filtre permet d'interpréter dans la plate-forme de cours Moodle des fichiers
+de données au format JSON créés au moyen du générateur JDicto.
+Ce qui permet d'afficher simplement des exercices de type "réécriture"
+(Jecho ou Execho).
+Remarque :
+---------
+Les dictées ne sont pas encore supportées dans cette première version
+  du filtre.
+
+B - Installation du filtre Jecho pour Moodle
+============================================
+Ce filtre a été testé sur une version 2.8 de Moodle.
+
+1- Se connecter à Moodle avec le compte admin.
+
+2- Dans le bloc "Administration", déplier le menu "Administration du site".
+
+3- Déplier le menu "plugins" et sélectionner la page "installer des plugins".
+
+4- Dans le formulaire "Installer le plugin à partir d'un zip":
+4.1- Sélectionner dans la liste "Type de plugin" : "filtre de texte (filter)",
+4.2- Dans "Paquetage ZIP", cliquer sur le bouton [choisir un fichier] et
+sélectionner le fichier "jecho.zip" qui contient le filtre.
+4.3- Cocher l'option "Quittance" pour indiquer qu'on assume les risques de
+cette installation.
+4.4- Cliquer sur le bouton [Installer le plugin à partir du fichier zip].
+
+5- La fenêtre de validation du paquetage du plugin est affichée.
+
+6- Cliquer sur le bouton [Installer le plugin !]
+
+7- Dans la page suivante, cliquer sur le bouton
+[Mettre à jour la base de données maintenant]
+
+8- Après le message de succès, cliquer sur le bouton [Continuer]
+
+C - Activation du filtre
+========================
+1- Dans le bloc "Administration", déplier le menu "Administration du site".
+
+2- Déplier le menu "plugins", puis "filtres" et afficher la page :
+"Gestion des filtres".
+
+3- Dans la liste des filtres installés, dans la colonne "actif?" sur la ligne
+du filtre "filtre jecho", dérouler la liste et sélectionner "activé".
+
+D - Test du filtre
+==================
+1- Créer ou récupérer un fichier de données de l'exercice de réécriture généré
+au moyen de JDicto :
+http://pcardona34.github.io/jdicto/
+
+2- Renommer ce fichier de données : jecho.json et le conserver sur le bureau,
+par exemple.
+
+1- Créer/afficher dans Moodle un cours.
+
+2- Basculer en mode "édition" : [Activer le mode édition]
+
+3- Ajouter une ressource "page" au moyen du lien "Ajouter une activité ou une
+ressource" : Ressources / Page, puis [Ajouter].
+Dans le formulaire de la page :
+3.1- Lui donner comme "nom" le titre désiré pour l'exercice.
+3.2- Dans le contenu de la page, saisir le mot "exercice", le sélectionner et
+cliquer dans la barre d'outils sur l'icône [lien]...
+3.3- Dans le dialogue "Créer un lien", cliquer sur le bouton :
+[parcourir les dépôts], puis dans le "sélecteur de fichier", sur le bouton:
+[parcourir]...
+Sélectionner sur le poste de travail le fichier de données "jecho.json" et
+cliquer sur le bouton [Déposer ce fichier].
+3.4- Au bas de la page en cours d'édition, cliquer sur le bouton
+[Enregistrer et afficher]
+
+Si tout s'est bien déroulé, l'exercice de réécriture est affiché.
+
+E - Utilisation courante du filtre
+==================================
+Suivez les étapes de la section D pour ajouter un exercice de réécriture
+à votre cours.
