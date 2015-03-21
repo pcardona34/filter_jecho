@@ -1,0 +1,29 @@
+{
+    "MSG_ERREUR_1": "Please first enter the text!",
+    "MSG_ERREUR_2": "Abandon the HTTP request.",
+    "MSG_ERREUR_3": "Unknown application!",
+    "MSG_ERREUR_4": "Failed to query.",
+    "MSG_INFO_1": "Select a special character. Place the cursor at the desired location in the text. Click the Insert button.",
+    "MSG_CONFIRMATION_1": "Do you really want to start all over?",
+    "LABEL_1": "Instructions",
+    "LABEL_2": "Exercise",
+    "LABEL_3": "Legal notices",
+    "LABEL_4": "Spell Checking",
+    "LABEL_5": "Correct version",
+    "LABEL_6": "By",
+    "LABEL_7": "Exercise designed by",
+    "BTN_CANCEL": "No",
+    "BTN_OK": "Yes",
+    "BTN_AIDE": "Help",
+    "BTN_CORRIGER": "Check",
+    "BTN_INSERER": "Insert",
+    "BTN_SOLUTION": "Show correct version",
+    "BTN_REPRENDRE": "Resume",
+    "BTN_RECOMMENCER": "Start again",
+    "tableau_carspec": [
+        "&ldquo;",
+        "—",
+        "&rdquo;",
+        "&hellip;"
+    ]
+}

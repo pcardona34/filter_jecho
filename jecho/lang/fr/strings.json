@@ -1,0 +1,33 @@
+{
+    "MSG_ERREUR_1": "Veuillez d'abord saisir le texte !",
+    "MSG_ERREUR_2": "Abandon de la requête HTTP",
+    "MSG_ERREUR_3": "Application inconnue !",
+    "MSG_ERREUR_4": "Echec de la requête.",
+    "MSG_INFO_1": "Séléctionnez un caractère, placez le curseur à l'endroit désiré dans le texte, cliquez sur le bouton Insérer.",
+    "MSG_CONFIRMATION_1": "Voulez-vous vraiment tout recommencer ?",
+    "LABEL_1": "Consigne",
+    "LABEL_2": "Exercice",
+    "LABEL_3": "Mentions légales",
+    "LABEL_4": "Correction",
+    "LABEL_5": "Solution",
+    "LABEL_6": "D'après",
+    "LABEL_7": "Exercice conçu par",
+    "BTN_CANCEL": "Non",
+    "BTN_OK": "Oui",
+    "BTN_AIDE": "Aide",
+    "BTN_CORRIGER": "Corriger",
+    "BTN_INSERER": "Insérer",
+    "BTN_SOLUTION": "Solution",
+    "BTN_REPRENDRE": "Reprendre",
+    "BTN_RECOMMENCER": "Recommencer",
+    "tableau_carspec": [
+        "«",
+        "—",
+        "»",
+        "&hellip;",
+        "œ",
+        "Œ",
+        "É",
+        "À"
+    ]
+}

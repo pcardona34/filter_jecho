@@ -14,22 +14,10 @@
  * __________________________________________________________________________
  */
 
-$string['anonymous'] = 'Anonymous';
-$string['by'] = 'By ';
-$string['correctthetext'] = 'Correct my text';
-$string['displaythesolution'] = 'Solution';
-$string['exercise'] = 'Exercise';
-$string['exercisedesignedby'] = 'Exercise designed by ';
-$string['help'] = 'Help';
-$string['filtername'] = 'filter_jecho';
-$string['helpspecars'] = 'To add a special carater into the text, click inside the text to display the cursor, then hit the button of the disered caracter.';
-$string['iframeloaderror'] = 'Error while loading the data into the iframe.';
-$string['instructions'] = 'Instructions';
-$string['keepon'] = 'Keep on';
-$string['legalnotice'] = 'Legal notice';
-$string['puttingright'] = 'Putting right';
-$string['startagain'] = 'Start again';
-$string['theaccuratetext'] = 'The accurate text';
-$string['withoutjs'] = 'No script. Javascript should be enabled.';
+ $string['filtername'] = 'filter_jecho';
+ $string['iframeloaderror'] = 'Error while loading the data into the iframe.';
+ $string['lang'] = 'The language of the exercise';
+ $string['lang_desc_global'] = 'The Jecho filter will display the exercice in this language.';
+ $string['lang_desc_local'] = 'This language setting will replace the default language in the current course.';
 
 ?>

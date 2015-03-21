@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+
+Jecho
+
+( c ) 2012-2015 - Patrick Cardona
+Version 3.0
+Mailto : pcardona34@gmail.com
+
+en : a Rewriting Exercise
+fr : un Exercice de réécriture
+
+i18n :
+Abstract: now, Jecho can display the exercise in english, french (default),
+spanich, catalan, italian or german.
+To get the desired translation, just call execho.html with the lang parameter.
+
+@param : lang
+@value : cat|de|en|es|fr|it
+Default value: fr
+Syntaxis : *//Your_server/execho.html?lang=en
+
+Data file :
+The default data file is called data.json and it is in the same folder as
+execho.html.
+To override this file and getting your own, just use the urljson parameter.
+
+@param : urljson
+@value : URI of your_file.json
+To create some new data file, see JDicto.
+Default value : data.json
+Syntaxis : *//Your_server/execho.html?urljson=your_file.json
+You can use absolute or relative path for this value.
+
+-->
+
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Exercice</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link href="css/execho.css" rel="stylesheet" type="text/css" />
+
+	</head>
+
+	<body>
+
+	<!-- Si Javascript n'est pas autorisé ou supporté... -->
+	<noscript>
+		<h1 lang="fr">Erreur !</h1>
+		<p lang="fr">Votre navigateur ne prend pas en charge l'exécution de scripts.
+			Veuillez autoriser l'exécution de JavaScript ou employer un navigateur adapté.</p>
+		<h1 lang="en">Error !</h1>
+		<p lang="en">Your browser does not support script execution. Please enable JavaScript execution or use a suitable browser.</p>
+	</noscript>
+
+	<!-- Conteneur -->
+	<div id="conteneur">
+
+	<!-- Corps de l'appli -->
+	<header>
+		<div id="titre_principal">Titre de l'exercice</div>
+
+		<div id="notifications">
+			<div class="message">&nbsp;</div>
+			<div class="bandeau">&otimes;</div>
+			<div class="confirmation">
+			<button type="button" id="cancel">&nbsp;</button>
+			&nbsp;<button type="button" id="ok">&nbsp;</button></div>
+		</div>
+
+
+	<nav>
+		<menu>
+		<div id="onglets">
+
+				<div class="normal" id="lien_consigne">&nbsp;</div>
+				<div class="normal" id="lien_exercice">&nbsp;</div>
+				<div class="normal" id="lien_mentions">&nbsp;</div>
+   </div>
+		</menu>
+	</nav>
+</header>
+
+<section>
+
+			<div id="onglet_consigne">
+				<div id="section_1">
+					<div id="consigne">&nbsp;</div>
+				</div>
+			</div>
+
+
+			<div id="onglet_exercice">
+
+				<div id="section_1_bis">
+					<!-- Formulaire de saisie du texte de l'exercice -->
+						<div id="table_spec">
+							<div>
+
+							<ul class="entete">
+
+								<!--	les caractères spéciaux sont générés par le script -->
+								<template id="row">
+   								<li class="spec"></li>
+  							</template>
+
+							</ul>
+
+							<ul class="entete">
+
+								<!--	les caractères spéciaux sont générés par le script -->
+								<template id="row_deux">
+   								<li class="spec"></li>
+  							</template>
+
+							</ul>
+
+							<ul class="entete">
+
+								<!--	les caractères spéciaux sont générés par le script -->
+								<template id="row_trois">
+   								<li class="spec"></li>
+  							</template>
+
+							</ul>
+
+							<ul id="actions">
+								<li id="car_sel">&nbsp;</li>
+								<li id="boutons">&nbsp;</li>
+							</ul>
+
+						</div>
+
+					</div>
+					<div id="texte" contentEditable="true">&nbsp;</div>
+					</div>
+
+
+
+
+			<!-- Annexes -->
+
+				<div id="section_2">
+					<h2>&nbsp;</h2>
+					<div id="correction">&nbsp;</div>
+				</div>
+
+				<div id="section_3">
+					<h2>&nbsp;</h2>
+					<div id="solution">&nbsp;</div>
+				</div>
+
+				<div id="section_4">
+
+						<button type="button" id="reprendre" class="reprendre">&nbsp;</button>
+						&nbsp;
+						<button type="button" id="recommencer" class="recommencer">&nbsp;</button>
+
+				</div>
+		</div>
+
+		<!-- Mentions légale -->
+			<div id="onglet_mentions">
+				<div>
+					<p>
+						<span id="intro_auteur">&nbsp;</span>
+						<span id="auteur">&nbsp;</span>,&nbsp;
+						<span id="ouvrage">?</span>.
+					</p>
+					<p>
+						<span id="intro_prof">&nbsp;</span>
+						<span id="prof">&nbsp;</span>.
+					</p>
+				</div>
+			</div>
+
+</section>
+
+
+<footer>
+	<p>&copy;2012-2015 Jecho - Patrick Cardona</p>
+</footer>
+
+</div> <!-- fin du conteneur-->
+
+<!-- Chargement optimisé des librairies Javascript en fin de page -->
+		<script src="js/lib/jsdiff.js"></script>
+	  <script src="js/execho.js" defer></script>
+
+	</body>
+</html>

@@ -15,24 +15,21 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+$LANGUAGES = array(
+    	'cat' => 'catala',
+    	'de' => 'Deutsh',
+    	'en' => 'english',
+    	'es' => 'catellano',
+    	'fr' => 'français',
+    	'it' => 'italiano'
+    	);
 
-/* __________________________________________________________________________
- *
- * Jecho filter for Moodle 2.x
- *
- * This filter will replace any links to a Jecho file (jecho.json)
- * with a execho.html file that presents that exercise.
- *
- * @package    filter
- * @subpackage jecho
- * @copyright  2015 Patrick Cardona
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- *
- * __________________________________________________________________________
- */
-
-defined('MOODLE_INTERNAL') || die();
-
-$plugin->version = 2015032100;
+$settings->add(new admin_setting_configselect(
+	'lang',
+	get_string('lang', 'filter_jecho'),
+	get_string('lang_desc_global', 'filter_jecho'),
+	2,
+	$LANGUAGES
+	));
 
 ?>

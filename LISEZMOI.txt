@@ -6,6 +6,7 @@ Ce filtre permet d'interpréter dans la plate-forme de cours Moodle des fichiers
 de données au format JSON créés au moyen du générateur JDicto.
 Ce qui permet d'afficher simplement des exercices de type "réécriture"
 (Jecho ou Execho).
+
 Remarque :
 ---------
 Les dictées ne sont pas encore supportées dans cette première version
@@ -81,3 +82,21 @@ E - Utilisation courante du filtre
 ==================================
 Suivez les étapes de la section D pour ajouter un exercice de réécriture
 à votre cours.
+
+F - Traduction de l'exercice
+============================
+L'interface de l'exercice est disponible en :
+- catalan (cat)
+- allemand (de)
+- anglais (en)
+- espagnol (es)
+- français (fr)
+- italien (it)
+
+Pour sélectionner la langue par défaut, utilisez les paramètres globaux du
+filtre dans l'administration des plugins :
+Admin. > plugins > filtres > gérer les filtres > filtre jecho > paramètres
+
+Pour définir une langue différente à l'intérieur d'un cours, adaptez les
+paramètres du filtre dans le cours actuel :
+Cours > Paramètres > filtres > filtre jecho > paramètres
