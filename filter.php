@@ -35,7 +35,7 @@
 /* __________________________________________________________________________
  *
  *
- * Jecho 1.3 License
+ * Jecho 3 License
  *
  * Copyright (c) 2012-2015 Patrick Cardona
  *
@@ -57,46 +57,64 @@
 
 
 
-defined('MOODLE_INTERNAL') || die();
+ defined('MOODLE_INTERNAL') || die();
 
-require_once($CFG->libdir.'/filelib.php');
-
-class filter_jecho extends moodle_text_filter {
-
-    function filter($text, array $options = array()) {
-        global $CFG, $PAGE;
-
-        if (!is_string($text)) {
-            // non string data can not be filtered anyway
-            return $text;
-        }
-
-        $newtext = $text; // fullclone is slow and not needed here
-
-        $search = '/<a.*?href="([^<]+jecho\.json)"[^>]*>.*?<\/a>/is';
-        $newtext = preg_replace_callback($search, 'filter_jecho_callback', $newtext);
-
-        if (is_null($newtext) or $newtext === $text) {
-            // error or not filtered
-            return $text;
-        }
-
-        return $newtext;
-    }
-}
+ require_once($CFG->libdir.'/filelib.php');
 
 
-function filter_jecho_callback($link) {
-    global $CFG;
 
-    $url = $link[1];
-    $execho = $CFG->wwwroot . '/filter/jecho/m_execho.php?urljson=' . $url;
-    $html = '<iframe width="900" height="500" src="'.$execho.'">'.get_string('iframeloaderror','filter_jecho').'</iframe>';
 
-    //$html = require_once($execho_relative_url . $relative_url);
-    //$html = require_once("//localhost:8888/moodle28/filter/jecho/execho/m_execho.php?urljson=//localhost:8888/moodle28/pluginfile.php/53/mod_page/content/1/jecho.json");
+ class filter_jecho extends moodle_text_filter {
 
-    return $html;
-}
+     function filter($text, array $options = array()) {
+         global $CFG, $PAGE;
 
+         if (!is_string($text)) {
+             // non string data can not be filtered anyway
+             return $text;
+         }
+
+ 		if (isset($this->localconfig['lang'])) {
+             $lang = $this->localconfig['lang'];
+         } else {
+             $lang = $CFG->filter_jecho;
+         }
+
+         $newtext = $text; // fullclone is slow and not needed here
+
+         $search = '/<a.*?href="([^<]+jecho\.json)"[^>]*>.*?<\/a>/is';
+         $url = preg_replace_callback($search, 'filter_jecho_callback', $newtext);
+
+         if (is_null($url) or $url === $text) {
+             // error or not filtered
+             return $text;
+         }
+
+         $execho = rip_tags($CFG->wwwroot . '/filter/jecho/jecho/execho.html?urljson=' . $url . '&lang=' . $lang);
+     	$html = '<iframe width="900" height="500" src="'.$execho.'">'.get_string('iframeloaderror','filter_jecho').'</iframe>';
+     	return $html;
+     }
+ }
+
+
+ function filter_jecho_callback($link) {
+
+     $url = $link[1];
+ 	return $url;
+
+ }
+
+ function rip_tags($string) {
+
+     // ----- remove HTML TAGs -----
+     $string = preg_replace ('/<[^>]*>/', '', $string);
+
+     // ----- remove control characters -----
+     $string = str_replace("\r", '', $string);    // --- replace with empty space
+     $string = str_replace("\n", '', $string);   // --- replace with empty space
+     $string = str_replace("\t", '', $string);   // --- replace with empty space
+
+     return $string;
+
+ }
 ?>

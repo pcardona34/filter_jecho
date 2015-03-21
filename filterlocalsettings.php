@@ -15,24 +15,20 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-
-/* __________________________________________________________________________
- *
- * Jecho filter for Moodle 2.x
- *
- * This filter will replace any links to a Jecho file (jecho.json)
- * with a execho.html file that presents that exercise.
- *
- * @package    filter
- * @subpackage jecho
- * @copyright  2015 Patrick Cardona
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- *
- * __________________________________________________________________________
- */
-
-defined('MOODLE_INTERNAL') || die();
-
-$plugin->version = 2015032100;
+class jecho_filter_local_settings_form extends filter_local_settings_form {
+    protected function definition_inner($mform) {
+    	$LANGUAGES = array(
+    	'cat' => 'catala',
+    	'de' => 'Deutsh',
+    	'en' => 'english',
+    	'es' => 'castellano',
+    	'fr' => 'français',
+    	'it' => 'italiano'
+    	);
+        $mform->addElement('html', '<p>'. get_string('lang_desc_local', 'filter_jecho') . '</p>');
+        $select = $mform->addElement('select', 'lang', get_string('lang', 'filter_jecho'), $LANGUAGES);
+        $select->setSelected(2);
+    }
+}
 
 ?>

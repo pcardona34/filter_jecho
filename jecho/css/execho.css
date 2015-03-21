@@ -1,0 +1,587 @@
+/* JECHO : execho.css
+ ( c ) 2012-2015 - Patrick Cardona
+ Version 3.0
+ */
+
+/* =================================================================== */
+/* LICENCE
+/* =================================================================== */
+/*
+@licstart  The following is the entire license notice for the
+    CSS code in this page.
+
+Copyright (C) 2012-2015  Patrick CARDONA - JECHO
+
+    The CSS code in this page is free software: you can
+    redistribute it and/or modify it under the terms of the GNU
+    General Public License (GNU GPL) as published by the Free Software
+    Foundation, either version 3 of the License, or (at your option)
+    any later version.  The code is distributed WITHOUT ANY WARRANTY;
+    without even the implied warranty of MERCHANTABILITY or FITNESS
+    FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+    As additional permission under GNU GPL version 3 section 7, you
+    may distribute non-source (e.g., minimized or compacted) forms of
+    that code without the copy of the GNU GPL normally required by
+    section 4, provided you include this license notice and a URL
+    through which recipients can access the Corresponding Source.
+
+@licend  The above is the entire license notice
+    for the CSS code in this page.
+*/
+
+@media all {
+
+	body {
+		font-family:sans-serif;
+		font-size:12px;
+	}
+
+	#conteneur{
+		margin-right: auto;
+    margin-left: auto;
+    width: auto;
+	}
+
+	h2 {
+		font-size:1.1rem;
+		color:grey;
+	}
+
+	#notifications{
+		padding: 0.1em;
+		padding-top: 5px;
+		background-color: 'whitesmoke';
+		margin-bottom: 2px;
+	}
+
+	/* notifications */
+	.bandeau{
+		text-align: center;
+		color:white;
+		font-size:2em;
+	}
+
+	.bandeau:hover{
+		cursor: pointer;
+	}
+
+	.message{
+		padding-top:10px;
+		text-align:center;
+	}
+
+	.confirmation{
+		padding-top:10px;
+		text-align: center;
+		padding-bottom:10px;
+	}
+
+	.espace {
+  clear: both;
+}
+
+
+}
+
+
+@media screen and (min-width: 641px) {
+
+	body {
+		font-size:16px;
+	}
+
+	#titre_principal {
+		font-size:1.2rem;
+		color:grey;
+		text-align:center;
+		margin-bottom:0.2rem;
+	}
+
+	#notifications{
+		border-radius: 10px;
+	}
+
+	/* onglets */
+	nav{
+		padding-top:0;
+		margin-top:0.1rem;
+		border:thin lightgrey solid;
+		border-bottom:thin white solid;
+		border-top-left-radius: 0.5em 0.5em;
+		border-top-right-radius: 0.5em 0.5em;
+	}
+
+
+	menu{
+		margin-left:0.35em;
+		margin-right:0.35em;
+		padding-left:0.3rem;
+		padding-top:6px;
+		border: thin grey solid;
+		border-radius: 0.5em 0.5em;
+		background-color: lightgrey;
+	}
+
+	#onglets{
+		padding-bottom:31px;
+	}
+
+	#onglets>div{
+		float:left;
+		padding-left:16px;
+		padding-right:16px;
+		padding-bottom:7px;
+		padding-top:6px;
+		margin-right:5px;
+		background-color:whitesmoke;
+		border-top-left-radius: 0.5em 0.5em;
+		border-top-right-radius: 0.5em 0.5em;
+		font-family: sans-serif;
+	}
+
+	#onglets>div.normal{
+		background-color:whitesmoke;
+		border:thin lightgrey solid;
+		color:grey;
+	}
+
+	#onglets>div.normal:hover{
+		border:thin grey solid;
+		color:black;
+		cursor:pointer;
+	}
+
+	#onglets>div.focus, #onglets>div.focus:hover{
+		background-color:white;
+		border:thin grey solid;
+		border-bottom:2px white solid;
+		color:black;
+		cursor:not-allowed;
+	}
+
+	section {
+		border-left:thin lightgrey solid;
+		border-right:thin lightgrey solid;
+		border-bottom:thin lightgrey solid;
+	}
+
+	#correction, #solution {
+		font-size:1em;
+		padding-top:1.5em;
+		padding-bottom:1.5em;
+		padding-right:1.5em;
+		padding-left:0.5em;
+		border-top:dotted thick grey;
+	}
+
+	#dictee {
+		font-size:1em;
+	}
+
+	del {
+		color:red;
+	}
+
+	ins {
+		color:green;
+	}
+
+	#section_1 {
+		padding:1.2rem;
+	}
+
+	#auteur {
+		font-variant:small-caps;
+	}
+
+	#ouvrage {
+		font-style:italic;
+	}
+
+	#ecrire {
+			background-color:white;
+	}
+
+	#texte {
+		padding:0.5rem;
+		background-color:white;
+		font-size: 1em;
+		line-height: 1.5;
+	}
+
+	#section_1, #section_1_bis {
+		clear:both;
+	}
+
+	#section_2, #section_3 {
+		clear:both;
+		padding:1.2rem;
+	}
+
+	#onglet_mentions>div{
+		padding:1.2rem;
+	}
+
+	#section_4{
+		text-align:center;
+		padding-bottom:10px;
+	}
+
+	button[type="button"]{
+		background-color:white;
+		color:grey;
+		font-size:0.9em;
+		height: 1.4rem;
+		cursor: pointer;
+		border:thin grey solid;
+	  border-radius: 5px;
+	}
+
+	button[type="button"]:hover{
+		background-color:whitesmoke;
+		color:black;
+	}
+
+
+	/* Audio : only for JDicto */
+	/*.audio {
+		padding:1.5em;
+		background-color:#CCCCCC;
+		-moz-border-radius: 10px;
+	    -webkit-border-radius: 10px;
+	    -khtml-border-radius: 10px;
+	    border-radius: 10px;
+	    box-shadow:
+		0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+		0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+	}
+	*/
+
+	/* Gestion des caractères spéciaux */
+
+	#table_spec{
+		margin:0rem;
+		padding:0rem;
+		background-color: whitesmoke;
+	  padding-left:0.75rem;
+		border: thin gainsboro solid;
+	}
+
+	.entete, #actions{
+		display:table;
+		margin-left:0rem;
+		padding:0rem;
+	}
+
+	.spec {
+		list-style-type:none;
+		display:table-cell;
+		margin:0rem;
+		width:2rem;
+		padding-top:0.25rem;
+		text-align:center;
+		vertical-align: bottom;
+		font-size:1em;
+	  border: thin gainsboro solid;
+	  background-color: white;
+		color:grey;
+	}
+
+	.spec:hover {
+		background-color:whitesmoke;
+		box-shadow:
+		0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+		0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+		color:black;
+		cursor: cell;
+	}
+
+	#boutons, #car_sel {
+		list-style-type:none;
+		display:table-cell;
+	}
+
+	#car_sel{
+		color: blue;
+	}
+
+	button#bouton_aide:hover{
+		cursor: help;
+	}
+
+	#conteneur::after {
+		content: ""; /* Important, sinon l'élément n'est pas généré. */
+		display: table;
+		clear: both;
+	}
+
+
+	button[disabled], button[disabled]:hover{
+		background-color: whitesmoke;
+		color: lightgrey;
+		cursor: not-allowed;
+	}
+
+	/* pied de page */
+	footer>p{
+		text-align:center;
+		font-size:0.8em;
+		color:grey;
+	}
+
+
+
+
+}
+
+/* Mobile CSS begins here */
+/* Début de la feuille de style pour mobile ici */
+
+	@media (max-width: 769px) {
+	    * {
+	        -webkit-box-sizing: border-box;
+	           -moz-box-sizing: border-box;
+	                box-sizing: border-box;
+	    }
+
+	    /* passer body (et tous les éléments de largeur fixe) en largeur automatique */
+
+	    body {
+	        width: auto;
+	        margin: 0;
+	        padding: 0;
+					font-size:14px;
+					background-color:darkgrey;
+	    }
+
+	    /* Un message personnalisé */
+
+	    /*
+			body:before {
+	        content: "Version mobile";
+	        display: block;
+	        text-align: center;
+	        font-style: italic;
+	        color: #777;
+	    }
+			*/
+
+			#titre_principal {
+				background-color:grey;
+				font-size:1rem;
+				padding:0.2rem;
+				padding-top:0.3rem;
+				color:white;
+				text-align:center;
+			}
+
+			/* onglets */
+			nav{
+				padding-top:0;
+				margin-top:0;
+				border:thin lightgrey solid;
+				border-bottom:thin white solid;
+			}
+
+
+			menu{
+				margin:0rem;
+				padding:0rem;
+				border: thin grey solid;
+				background-color: lightgrey;
+				height:auto;
+			}
+
+			#onglets{
+				padding-bottom:1.4rem;
+			}
+
+			#onglets>div{
+				float:left;
+				padding-left:0.25rem;
+				padding-right:0.25rem;
+				padding-bottom:0.2rem;
+				padding-top:0.2rem;
+				margin-right:0.1rem;
+				background-color:whitesmoke;
+				font-family: sans-serif;
+			}
+
+			#onglets>div.normal{
+				background-color:whitesmoke;
+				border:thin lightgrey solid;
+				color:grey;
+			}
+
+			#onglets>div.focus {
+				background-color:grey;
+				border:thin grey solid;
+				border-bottom:2px white solid;
+				color:white;
+				cursor:not-allowed;
+			}
+
+			section {
+				border-left:thin lightgrey solid;
+				border-right:thin lightgrey solid;
+				border-bottom:thin lightgrey solid;
+				background-color:white;
+			}
+
+			#correction, #solution {
+				font-size: 1.2em;
+				padding-top:1.5em;
+				padding-bottom:1.5em;
+				padding-right:1.5em;
+				padding-left:0.5em;
+				border-top:dotted thick grey;
+			}
+
+			#dictee {
+				font-size: 1.2em;
+			}
+
+			del {
+				color:red;
+			}
+
+			ins {
+				color:green;
+			}
+
+			#section_1 {
+				padding:1.2rem;
+			}
+
+			#auteur {
+				font-variant:small-caps;
+			}
+
+			#ouvrage {
+				font-style:italic;
+			}
+
+			#ecrire {
+					background-color:white;
+			}
+
+			#texte {
+				padding:0.5rem;
+				background-color:white;
+				font-size: 1.2em;
+				line-height: 1.5;
+			}
+
+			#section_1, #section_1_bis {
+				clear:both;
+			}
+
+			#section_2, #section_3 {
+				clear:both;
+				padding:1.2rem;
+			}
+
+			#onglet_mentions>div{
+				padding:1.2rem;
+			}
+
+			#section_4{
+				text-align:center;
+				padding-bottom:1rem;
+			}
+
+			button[type="button"]{
+				background-color:white;
+				color:grey;
+				font-size:0.9em;
+				height: 1.4rem;
+				cursor: pointer;
+				border:thin grey solid;
+			  border-radius: 5px;
+			}
+
+			/* Audio : only for JDicto */
+			/*.audio {
+				padding:1.5em;
+				background-color:#CCCCCC;
+				-moz-border-radius: 10px;
+			    -webkit-border-radius: 10px;
+			    -khtml-border-radius: 10px;
+			    border-radius: 10px;
+			    box-shadow:
+				0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+				0px 2px 2px 0px rgba(255, 255, 255, 0.5);
+			}
+			*/
+
+			/* Gestion des caractères spéciaux */
+
+			#table_spec{
+				margin:0rem;
+				padding:0rem;
+				background-color: whitesmoke;
+			  padding-left:0.1rem;
+				border: thin gainsboro solid;
+			}
+
+			.entete, #actions{
+				display:table;
+				margin-left:0rem;
+				padding:0rem;
+			}
+
+			.spec {
+				list-style-type:none;
+				display:table-cell;
+				margin:0rem;
+				width:2rem;
+				height:1.5rem;
+				padding-top:0.15rem;
+				padding-bottom:0.15rem;
+				text-align:center;
+				vertical-align: bottom;
+				font-size:1em;
+			  border: thin gainsboro solid;
+			  background-color: white;
+				color:grey;
+			}
+
+			#boutons, #car_sel {
+				list-style-type:none;
+				display:table-cell;
+			}
+
+			#car_sel{
+				color: blue;
+			}
+
+			#conteneur::after {
+				content: ""; /* Important, sinon l'élément n'est pas généré. */
+				display: table;
+				clear: both;
+			}
+
+
+			button[disabled] {
+				background-color: whitesmoke;
+				color: lightgrey;
+				cursor: not-allowed;
+			}
+
+			/* pied de page */
+			footer>p{
+				text-align:center;
+				font-size:0.8em;
+				color:white;
+			}
+
+
+	}
+
+	@media (max-device-width:768px) and (orientation: landscape) {
+  html {
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+  }
+}
