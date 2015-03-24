@@ -14,10 +14,10 @@
  * __________________________________________________________________________
  */
 
- $string['filtername'] = 'filter_jecho';
+ $string['filtername'] = 'filtro jecho';
  $string['iframeloaderror'] = 'Error al cargar los datos en el iframe.';
  $string['lang'] = 'El lenguaje del ejercicio';
  $string['lang_desc_global'] = 'El filtro Jecho mostrará el ejercicio en este idioma.';
  $string['lang_desc_local'] = 'Esta configuración de idioma reemplazará el idioma predeterminado en el curso actual.';
-
+ 
 ?>

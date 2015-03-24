@@ -14,7 +14,7 @@
  * __________________________________________________________________________
  */
 
- $string['filtername'] = 'filter_jecho';
+ $string['filtername'] = 'Filter Jecho';
  $string['iframeloaderror'] = 'Fehler beim Laden der Daten in den iframe.';
  $string['lang'] = 'Die Sprache der Bewegung';
  $string['lang_desc_global'] = 'Die Jecho Filter den ersetzen in dieser Sprache angezeigt.';

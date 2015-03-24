@@ -14,7 +14,7 @@ Les dictées ne sont pas encore supportées dans cette première version
 
 B - Installation du filtre Jecho pour Moodle
 ============================================
-Ce filtre a été testé sur une version 2.8 de Moodle.
+Ce filtre a été testé sur une version 2.8.x de Moodle.
 
 1- Se connecter à Moodle avec le compte admin.
 
@@ -55,8 +55,8 @@ D - Test du filtre
 au moyen de JDicto :
 http://pcardona34.github.io/jdicto/
 
-2- Renommer ce fichier de données : jecho.json et le conserver sur le bureau,
-par exemple.
+2- Renommer ce fichier de données : jecho.json (et non data.json) et le
+conserver sur le bureau, par exemple.
 
 1- Créer/afficher dans Moodle un cours.
 

@@ -17,17 +17,20 @@
 
 class jecho_filter_local_settings_form extends filter_local_settings_form {
     protected function definition_inner($mform) {
-    	$LANGUAGES = array(
+    	// the available translations
+      $LANGUAGES = array(
     	'cat' => 'catala',
     	'de' => 'Deutsh',
-    	'en' => 'english',
+    	'en' => 'English',
     	'es' => 'castellano',
     	'fr' => 'français',
     	'it' => 'italiano'
     	);
-        $mform->addElement('html', '<p>'. get_string('lang_desc_local', 'filter_jecho') . '</p>');
-        $select = $mform->addElement('select', 'lang', get_string('lang', 'filter_jecho'), $LANGUAGES);
-        $select->setSelected(2);
+
+    // Display a select list : the default language is English.
+    $mform->addElement('html', '<p>'. get_string('lang_desc_local', 'filter_jecho') . '</p>');
+    $select = $mform->addElement('select', 'lang', get_string('lang', 'filter_jecho'), $LANGUAGES);
+    $select->setSelected('en');
     }
 }
 

@@ -10,11 +10,11 @@ Allowing just display-type exercises of "rewriting"
 Note:
 ---------
 Dictations are not yet supported in this first version
-  filter.
+ of the filter.
 
 B - Jecho Filter Installation for Moodle
 ============================================
-This filter has been tested on version 2.8 of Moodle.
+This filter has been tested on version 2.8.x of Moodle.
 
 1- Login to Moodle with the admin account.
 
@@ -26,7 +26,7 @@ This filter has been tested on version 2.8 of Moodle.
 4.1- Select from the list "type plugin" "text filter (filter)"
 4.2- In "Zip Package", click the [choose a file] and
 select the "jecho.zip" file that contains the filter.
-4.3- Check the "Receipt" option to indicate that You assume the risk.
+4.3- Check the "Aknowlegement" option to indicate that You assume the risk.
 4.4- Click on the button [Install the plugin from the zip file].
 
 5- plugin package validation window is displayed.
@@ -48,13 +48,16 @@ C - filter activation
 3. In the list of installed filters in the column "active?" on line
 filter "jecho filter" down the list and select "on".
 
+4. Click on the link "Settings" et adjust the UI global language for the
+exercices.
+
 D - Filter test
 ==================
 1- Create or retrieve a data file of the generated rewrite exercise
 through JDicto:
 http://pcardona34.github.io/jdicto/
 
-2. Rename the data file: jecho.json and keep on the desktop,
+2. Rename the data file: jecho.json (not data.json) and keep it on the desktop,
 for example.
 
 1- Create / display a Moodle course.
@@ -64,14 +67,14 @@ for example.
 3- Add Resource "page" through the "Add an activity or
 resource ": Resources / Page, then [Add].
 
-In the form of the page:
+In the form of the Page:
 3.1 Give as "name" the desired title for the exercise.
-3.2 In the content of the page, enter the word "exercise", and select the
-click in the toolbar on the [Link] ...
+3.2 In the content of the page, enter the word "exercise", select it, and then
+click in the toolbar on the [Link] icon...
 3.3- In the dialog "Link", click the button:
-[Browse repositories], then in the "file selector" button:
+[Browse repositories], then in the [file selector] button:
 [Look over] ...
-Select from the workstation the data file "jecho.json" and
+Select from the workstation the data file "jecho.json" from your Desktop and
 click on [Place this file].
 3.4- At the bottom of the edit current page, click the button
 [Save and display]

@@ -18,17 +18,17 @@
 $LANGUAGES = array(
     	'cat' => 'catala',
     	'de' => 'Deutsh',
-    	'en' => 'english',
-    	'es' => 'catellano',
+    	'en' => 'English',
+    	'es' => 'castellano',
     	'fr' => 'français',
     	'it' => 'italiano'
     	);
 
 $settings->add(new admin_setting_configselect(
-	'lang',
+	'filter_jecho_lang',
 	get_string('lang', 'filter_jecho'),
 	get_string('lang_desc_global', 'filter_jecho'),
-	2,
+	'en',
 	$LANGUAGES
 	));
 

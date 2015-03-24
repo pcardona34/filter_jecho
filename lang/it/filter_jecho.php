@@ -14,7 +14,7 @@
  * __________________________________________________________________________
  */
 
- $string['filtername'] = 'filter_jecho';
+ $string['filtername'] = 'filtro jecho';
  $string['iframeloaderror'] = 'Errore durante il caricamento dei dati nel iframe.';
  $string['lang '] = 'La lingua dell\'esercizio';
  $string['lang_desc_global'] = 'Il filtro Jecho visualizzerà il esercizio in questa lingua.';

@@ -62,8 +62,6 @@
  require_once($CFG->libdir.'/filelib.php');
 
 
-
-
  class filter_jecho extends moodle_text_filter {
 
      function filter($text, array $options = array()) {
@@ -74,11 +72,13 @@
              return $text;
          }
 
- 		if (isset($this->localconfig['lang'])) {
-             $lang = $this->localconfig['lang'];
-         } else {
-             $lang = $CFG->filter_jecho;
-         }
+       // Set the language of the exercise UI
+       if (isset($this->localconfig['lang'])) {
+               $lang = $this->localconfig['lang'];
+           }
+        else {
+                $lang = $CFG->filter_jecho_lang;
+        }
 
          $newtext = $text; // fullclone is slow and not needed here
 
@@ -90,20 +90,29 @@
              return $text;
          }
 
-         $execho = rip_tags($CFG->wwwroot . '/filter/jecho/jecho/execho.html?urljson=' . $url . '&lang=' . $lang);
+      $execho = rip_tags($CFG->wwwroot . '/filter/jecho/jecho/execho.html?urljson=' . $url . '&lang=' . $lang);
      	$html = '<iframe width="900" height="500" src="'.$execho.'">'.get_string('iframeloaderror','filter_jecho').'</iframe>';
-     	return $html;
+      return $html;
      }
  }
 
 
+ /* ************************************************** */
+ /* @Function : return the href string                 */
+ /* @param : $link is got from the search expression   */
+ /* ************************************************** */
  function filter_jecho_callback($link) {
 
      $url = $link[1];
- 	return $url;
+ 	   return $url;
 
  }
 
+
+ /* ************************************************** */
+ /* @Function : remove HTML tags                       */
+ /* @param : $string                                   */
+ /* ************************************************** */
  function rip_tags($string) {
 
      // ----- remove HTML TAGs -----
@@ -117,4 +126,5 @@
      return $string;
 
  }
+
 ?>
