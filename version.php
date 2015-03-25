@@ -33,6 +33,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2015032400;
+$plugin->version = 2015032401;
 
 ?>
