@@ -1,4 +1,4 @@
-/* JECHO : execho.js
+/* JECHO : jecho.js
  ( c ) 2012-2015 - Patrick Cardona
  Version 3.0
  */

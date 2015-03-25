@@ -90,7 +90,7 @@
              return $text;
          }
 
-      $execho = rip_tags($CFG->wwwroot . '/filter/jecho/jecho/execho.html?urljson=' . $url . '&lang=' . $lang);
+      $execho = rip_tags($CFG->wwwroot . '/filter/jecho/jecho/view.html?urljson=' . $url . '&lang=' . $lang);
      	$html = '<iframe width="900" height="500" src="'.$execho.'">'.get_string('iframeloaderror','filter_jecho').'</iframe>';
       return $html;
      }
