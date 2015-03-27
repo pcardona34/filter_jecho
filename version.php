@@ -18,14 +18,13 @@
 
 /* __________________________________________________________________________
  *
- * Jecho filter for Moodle 2.x
+ * Jecho filter for Moodle 2.8+
  *
  * This filter will replace any links to a Jecho file (jecho.json)
- * with a execho.html file that presents that exercise.
+ * with a jecho/view.html file that display that exercise.
  *
- * @package    filter
- * @subpackage jecho
- * @copyright  2015 Patrick Cardona
+ * @package    filter_jecho
+ * @copyright  2015, Patrick Cardona <pcardona34@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  *
  * __________________________________________________________________________
@@ -34,5 +33,14 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version = 2015032401;
+$plugin->requires = 2014111000; // Moodle 2.8 is required
+$plugin->cron = 0;
+$plugin->component = 'filter_jecho'; // Declare the type and name of this plugin.
+$plugin->maturity = MATURITY_STABLE; // This is considered as ready for production sites.
+$plugin->release = 'v3.0.1'; // Release of the filter based on Jecho 3rd release.
+$plugin->dependencies = array(
+// none
+);
+
 
 ?>
